@@ -46,11 +46,11 @@ for i in range(len(sample_function_ensemble[0])):
     x_length.append(i) #Get length of x/time
 
 for y in sample_function_ensemble:
-    plt.plot(x_length, y) #Plot
+    plt.plot(x_length, y, linewidth = 0.5) #Plot
 
-plt.plot(mean, linewidth = 2, color = 'white')
+plt.plot(mean, linewidth = 2, color = 'red')
 plt.plot(sd, linewidth = 2, color = 'black')
 plt.plot(neg_sd, linewidth = 2, color = 'black')
-
+plt.xticks(numpy.arange(0, steps+10, step=steps/10))
 plt.title('Random Walk with %d steps and %d sample functions' % (steps, sample_functions_amount))
 plt.show()
